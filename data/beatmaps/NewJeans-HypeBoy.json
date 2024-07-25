@@ -1,0 +1,31 @@
+{
+  "BeatmapJSON_Version": "0.0.1",
+
+  "Track_Details": {
+    "Track_Name": "",
+    "Track_Artist": "",
+    "Track_Description": "",
+    "Track_Mapper": "",
+    "Track_Version": "",
+    "Track_BPM": "",
+    "Track_Difficulty": ""
+  },
+
+  "Track_Gameplay": {
+    "Audio": {
+      "type": "file",
+      "url": "data/audio/NewJeans- HypeBoy.mp3"
+    },
+    "Beatmap_Notes": [
+      { "time": 1, "lane": 1, "width": 1, "type": "hit" },
+      { "time": 2, "lane": 1, "width": 2, "type": "hit" },
+      { "time": 3, "lane": 1, "width": 3, "type": "hit" },
+      { "time": 4, "lane": 1, "width": 4, "type": "hit" },
+      { "time": 18, "lane": 1, "width": 1, "type": "hit" },
+      { "time": 18.25, "lane": 2, "width": 1, "type": "hit" },
+      { "time": 18.5, "lane": 3, "width": 1, "type": "hit" },
+      { "time": 18.75, "lane": 3, "width": 1, "type": "hit" },
+      { "time": 19, "lane": 3, "width": 1, "type": "hit" }
+    ]
+  }
+}

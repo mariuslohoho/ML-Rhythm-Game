@@ -1,0 +1,25 @@
+{
+  "BeatmapJSON_Version": "0.0.1",
+
+  "Track_Details": {
+    "Track_Name": "",
+    "Track_Artist": "",
+    "Track_Description": "",
+    "Track_Mapper": "",
+    "Track_Version": "",
+    "Track_BPM": "",
+    "Track_Difficulty": ""
+  },
+
+  "Track_Gameplay": {
+    "audio": {
+      "type": "file",
+      "url": ""
+    },
+    "Beatmap_Notes": [
+      { "time": 0, "lane": 1, "width": 1, "type": "hit" },
+      { "time": 0.5, "lane": 2, "width": 1, "type": "hit" },
+      { "time": 1.0, "lane": 3, "width": 1, "type": "hit" }
+    ]
+  }
+}

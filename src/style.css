@@ -1,0 +1,103 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  overflow: hidden;
+  user-select: none;
+}
+
+div.playfield {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate3d(-50%, -50%, 0);
+
+  background-color: aqua;
+  height: 100vh;
+  width: 30vw;
+  aspect-ratio: 428/911;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .main {
+    --scale: 1;
+
+    position: fixed;
+    top: -100%;
+
+    transform: scale(var(--scale)) perspective(133rem) rotateX(61deg) translateY(-20vh) translateZ(41em);
+
+    background-color: greenyellow;
+    aspect-ratio: 2277.5 / 414.297;
+    height: 200rem;
+    width: 35rem;
+    max-width: 90vw;
+
+    background-image: repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%),
+      repeating-linear-gradient(90deg, #ccc 0 1px, transparent 1px 100%);
+    background-size: calc(100% / 12 - 0.105px) 1000vh;
+  }
+}
+
+div.playfield > div.main > div.notes {
+  .note {
+    --pos: 0%;
+    --lane: 1;
+    --width: 1;
+
+    background-color: purple;
+    height: 4rem;
+    width: calc((100% / 12) * var(--width));
+
+    position: absolute;
+    top: var(--pos);
+    left: calc((var(--lane) - 1) * (100% / 12));
+  }
+
+  /* Adjust width for specific lanes */
+  .note[style*="--lane=12"] {
+    --width: 1;
+    width: calc((100% / 12) * var(--width));
+  }
+
+  .note[style*="--lane=11"][style*="--width=3"] {
+    --width: 2;
+    width: calc((100% / 12) * var(--width));
+  }
+}
+
+div.judgement {
+  background-color: rgba(255, 195, 195, 0.742);
+  height: 4rem;
+  width: 100%;
+  position: absolute;
+  top: calc(98% - 4rem);
+  transform-origin: bottom;
+}
+
+div.touch {
+  position: absolute;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  div {
+    /* --lane: 1; */
+
+    /* position: relative; */
+    /* width: calc(100% / 12); */
+    height: 100vh;
+    z-index: 10000;
+    /* left: calc(100% / 12 * (var(--lane)-1)); */
+
+    &:active {
+      background-color: rgba(195, 195, 195, 0.35);
+      box-shadow: inset 0px 0px 5px 2px white;
+    }
+  }
+}
