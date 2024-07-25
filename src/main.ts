@@ -1,16 +1,15 @@
-import { json } from "stream/consumers";
 import { BeatmapJSON } from "./BeatmapJSON";
 import * as FS from "fs";
 const fs: typeof FS = window.require("fs");
-import { TrackGameplay, Audio } from "./BeatmapJSON.ts";
-import { SpawnNote } from "./RenderNote.ts";
+// import { TrackGameplay, Audio } from "./BeatmapJSON.ts";
+// import { SpawnNote } from "./RenderNote.ts";
 import { NoteScheduler } from "./NoteScheduler.ts";
 
 // const fs = require("fs");
 
 const playfield = document.querySelector("div.playfield") as HTMLDivElement;
 const main = playfield.querySelector("div.main") as HTMLDivElement;
-const notes = main.querySelector("div.notes") as HTMLDivElement;
+// const notes = main.querySelector("div.notes") as HTMLDivElement;
 
 function FitPlayfieldWithScreenDimentions() {
   const currentBoundingRect = main.getBoundingClientRect();
@@ -37,22 +36,22 @@ window.addEventListener("resize", () => {
   FitPlayfieldWithScreenDimentions();
 });
 
-function RanInt(min: number, max: number) {
-  // Generate a random number between min and max (inclusive)
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// function RanInt(min: number, max: number) {
+//   // Generate a random number between min and max (inclusive)
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
-function spawnRandomNotes(numNotes: number) {
-  for (let i = 0; i < numNotes; i++) {
-    SpawnNote(RanInt(1, 12), RanInt(1, 3));
-  }
-}
+// function spawnRandomNotes(numNotes: number) {
+//   for (let i = 0; i < numNotes; i++) {
+//     SpawnNote(RanInt(1, 12), RanInt(1, 3));
+//   }
+// }
 
-function continuouslySpawnNotes(interval: number) {
-  setInterval(() => {
-    spawnRandomNotes(1); // Spawn 1 random note each interval
-  }, interval);
-}
+// function continuouslySpawnNotes(interval: number) {
+//   setInterval(() => {
+//     spawnRandomNotes(1); // Spawn 1 random note each interval
+//   }, interval);
+// }
 
 // continuouslySpawnNotes(200);
 
